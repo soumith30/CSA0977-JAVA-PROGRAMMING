@@ -1,0 +1,25 @@
+public class StringExample {
+    public static void main(String[] args) {
+        String str1 = new String();
+        String str2 = new String("Hello, World!"); 
+        char[] charArray = {'J', 'a', 'v', 'a'};
+        String str3 = new String(charArray); 
+        byte[] byteArray = {72, 101, 108, 108, 111};
+        String str4 = new String(byteArray); 
+        System.out.println("String 1: " + str1);
+        System.out.println("String 2: " + str2);
+        System.out.println("String 3: " + str3);
+        System.out.println("String 4: " + str4);
+        System.out.println("Length of str2: " + str2.length());
+        System.out.println("Character at index 1 in str2: " + str2.charAt(1));
+        System.out.println("Substring of str2 from index 7 to 12: " + str2.substring(7, 12));
+        System.out.println("Does str2 contain 'World': " + str2.contains("World"));
+        System.out.println("Is str2 equal to 'Hello, World!': " + str2.equals("Hello, World!"));
+        System.out.println("Index of 'World' in str2: " + str2.indexOf("World"));
+        System.out.println("str2 in uppercase: " + str2.toUpperCase());
+        System.out.println("Replacing 'World' with 'Java' in str2: " + str2.replace("World", "Java"));
+
+        String str5 = "   Hello, Java!   ";
+        System.out.println("str5 after trim: '" + str5.trim() + "'");
+    }
+}
