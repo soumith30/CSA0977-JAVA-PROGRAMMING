@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class StudentResult {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter marks for four subjects (out of 100):");
+        System.out.print("Subject 1: ");
+        int subject1 = scanner.nextInt();
+        System.out.print("Subject 2: ");
+        int subject2 = scanner.nextInt();
+        System.out.print("Subject 3: ");
+        int subject3 = scanner.nextInt();
+        System.out.print("Subject 4: ");
+        int subject4 = scanner.nextInt();
+        int totalMarks = subject1 + subject2 + subject3 + subject4;
+        double aggregatePercentage = (totalMarks / 4.0);
+        String grade = calculateGrade(aggregatePercentage);
+        System.out.println("\nTotal Marks: " + totalMarks);
+        System.out.printf("Aggregate Percentage: %.2f%%\n", aggregatePercentage);
+        System.out.println("Grade Obtained: " + grade);
+        scanner.close();
+    }
+    private static String calculateGrade(double aggregatePercentage) {
+        if (aggregatePercentage > 75) {
+            return "Distinction";
+        } else if (aggregatePercentage >= 60 && aggregatePercentage < 75) {
+            return "First Division";
+        } else if (aggregatePercentage >= 50 && aggregatePercentage < 60) {
+            return "Second Division";
+        } else if (aggregatePercentage >= 40 && aggregatePercentage < 50) {
+            return "Third Division";
+        } else {
+            return "Fail";
+        }
+    }
+}
